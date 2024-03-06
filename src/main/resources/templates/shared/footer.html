@@ -1,0 +1,82 @@
+</main>
+</div>
+</div>
+<!--<footer class="sticky-footer bg-footer">-->
+<!--    <div class="container my-auto">-->
+<!--        <div class="copyright text-center my-auto">-->
+<!--            <span>Copyright &copy; <span id="anoAtual"></span></span>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
+</div>
+<a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Jquery Maks -- https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+<!-- Bootstrap Select -->
+<script src="/bootstrap-select/js/bootstrap-select.js"></script>
+
+<!-- Loading -->
+<script src="/loading/js/loading.js"></script>
+<script src="/loading/js/loadingoverlay.min.js"></script>
+
+<!-- Notification -->
+<script src="/notification/notification.js"></script>
+
+<!-- DataTables -->
+<script src="/datatables/datatables.js"></script>
+<script src="/datatables/Buttons/js/buttons.bootstrap.js"></script>
+
+<!-- PDF Builder -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<!-- Scripts Default -->
+<script src="/js/script.js"></script>
+<script src="/js/file.js"></script>
+<script src="/js/description.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/formatter.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/calculator.js"></script>
+
+<!-- chart js -->
+<script src="/chart-js/chart.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+
+<!-- Jquery Validate -->
+<script src="/jquery-validation/jquery.validate.min.js"></script>
+<script src="/jquery-validation/location/messages_pt_BR.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        definirMenuAtivo();
+        obterAnoAtual();
+
+    });
+
+    function definirMenuAtivo() {
+        var menuAtivo = $('#menuAtivo').val();
+        if (menuAtivo) {
+            $(".menu-principal li a").removeClass("active");
+            $("a." + menuAtivo).addClass("active");
+        }
+    }
+
+    function obterAnoAtual() {
+        const dataAtual = new Date();
+        const anoAtual = dataAtual.getFullYear();
+        $("#anoAtual").text(anoAtual);
+    }
+
+
+</script>
+</body>
+</html>
